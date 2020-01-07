@@ -6,6 +6,8 @@
         "start": "PORT=3300 HTTPS=true react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",
+        "ci-test": "CI=true npm test -- --coverage",
+        "test:debug": "react-scripts --inspect-brk test --runInBand --no-cache",
         "eject": "react-scripts eject",
         "code-auto-formatting": "./node_modules/.bin/prettier --write 'src/**/*.{js,jsx,ts,tsx,json,css,scss,md}'",
         "storybook": "start-storybook -p 9009 -s public",
@@ -67,5 +69,26 @@
         "commitizen": {
             "path": "./node_modules/cz-conventional-changelog"
         }
+    },
+    "jest": {
+        "collectCoverageFrom": [
+            "src/**/*.{js,jsx,ts,tsx}",
+            "!node_modules/",
+            "!src/index.tsx",
+            "!src/stories/**/*.{js,jsx,ts,tsx}",
+            "!src/serviceWorker.ts",
+            "!src/react-app-env.d.ts"
+        ],
+        "coverageThreshold": {
+            "global": {
+                "branches": 90,
+                "functions": 90,
+                "lines": 90,
+                "statements": 90
+            }
+        },
+        "coverageReporters": [
+            "text"
+        ]
     }
 }
