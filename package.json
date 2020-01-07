@@ -10,7 +10,7 @@
     "code-auto-formatting": "./node_modules/.bin/prettier --write 'src/**/*.{js,jsx,ts,tsx,json,css,scss,md}'",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public",
-    "commit": "npx git-cz"
+    "commit-code": "npm run code-auto-formatting && git add . && npx git-cz"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -35,7 +35,9 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "pre-commit-code": "lint-staged",
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook"
     }
   },
   "devDependencies": {
@@ -50,6 +52,7 @@
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.17",
     "@types/react-dom": "^16.9.4",
+    "cz-conventional-changelog": "^3.0.2",
     "husky": "^4.0.0",
     "lint-staged": "^9.5.0",
     "prettier": "^1.19.1",
@@ -59,5 +62,10 @@
   "dependencies": {
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
