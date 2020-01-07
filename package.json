@@ -12,7 +12,9 @@
         "code-auto-formatting": "./node_modules/.bin/prettier --write 'src/**/*.{js,jsx,ts,tsx,json,css,scss,md}'",
         "storybook": "start-storybook -p 9009 -s public",
         "build-storybook": "build-storybook -s public",
-        "commit": "git add . && git commit -am ''"
+        "commit": "git add . && git commit -am ''",
+        "test-build": "firebase serve --only hosting",
+        "deploy-hosting": "./node_modules/.bin/firebase deploy --only hosting"
     },
     "eslintConfig": {
         "extends": "react-app"
@@ -54,6 +56,7 @@
         "@types/react": "^16.9.17",
         "@types/react-dom": "^16.9.4",
         "cz-conventional-changelog": "^3.0.2",
+        "firebase-tools": "^7.11.0",
         "husky": "^4.0.0",
         "lint-staged": "^9.5.0",
         "node-sass": "^4.13.0",

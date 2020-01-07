@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './logo.png';
+import logo from './logo.svg';
 import './App.css';
 
 const App: React.FC = () => {
@@ -7,7 +7,7 @@ const App: React.FC = () => {
         <div className="App">
             <header className="App-header">
                 <img src={logo} className="App-logo" alt="logo" />
-                <p>Building Web Applications close to perfects</p>
+                <p>Building Web Applications Close to Perfects</p>
             </header>
         </div>
     );
