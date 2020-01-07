@@ -10,7 +10,7 @@
     "code-auto-formatting": "./node_modules/.bin/prettier --write 'src/**/*.{js,jsx,ts,tsx,json,css,scss,md}'",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public",
-    "commit-code": "npm run code-auto-formatting && git add . && npx git-cz"
+    "commit-code": "git add . && npx git-cz"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -36,7 +36,6 @@
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "pre-commit-code": "lint-staged",
       "prepare-commit-msg": "exec < /dev/tty && git cz --hook"
     }
   },
