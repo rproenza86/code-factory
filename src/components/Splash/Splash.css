@@ -11,6 +11,9 @@
     .Splash-logo {
         height: 60vmin;
     }
+    .Splash-header {
+        font-size: calc(28px + 2vmin) !important;
+    }
 }
 
 @media (prefers-reduced-motion: no-preference) {

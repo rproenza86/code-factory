@@ -16,7 +16,7 @@ const Splash: React.FC = () => {
     }, 100);
 
     setTimeout(function() {
-        setMoto('Building Web Applications Close to Perfects');
+        setMoto('Building Impeccable Web Applications');
         setActivateMotoTransition(true);
     }, 200);
 
