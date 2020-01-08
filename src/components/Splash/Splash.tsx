@@ -16,32 +16,30 @@ const Splash: React.FC = () => {
     }, 100);
 
     setTimeout(function() {
-        setMoto('Building Web Splashlications Close to Perfects');
+        setMoto('Building Web Applications Close to Perfects');
         setActivateMotoTransition(true);
     }, 200);
 
     return (
-        <>
-            <header className="Splash-header">
-                <CSSTransition
-                    in={activateLogoTransition}
-                    timeout={TransitionTimeout}
-                    classNames="Splash-logo-container"
-                >
-                    <img src={logo} className="Splash-logo" alt="logo" />
-                </CSSTransition>
+        <header className="Splash-header">
+            <CSSTransition
+                in={activateLogoTransition}
+                timeout={TransitionTimeout}
+                classNames="Splash-logo-container"
+            >
+                <img src={logo} className="Splash-logo" alt="logo" />
+            </CSSTransition>
 
-                <CSSTransition
-                    in={activateMotoTransition}
-                    timeout={TransitionTimeout}
-                    classNames="Splash-moto"
-                >
-                    <div>
-                        <p>{moto}</p>
-                    </div>
-                </CSSTransition>
-            </header>
-        </>
+            <CSSTransition
+                in={activateMotoTransition}
+                timeout={TransitionTimeout}
+                classNames="Splash-moto"
+            >
+                <div>
+                    <p>{moto}</p>
+                </div>
+            </CSSTransition>
+        </header>
     );
 };
 

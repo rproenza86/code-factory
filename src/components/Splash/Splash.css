@@ -27,6 +27,7 @@
     justify-content: center;
     font-size: calc(20px + 2vmin);
     font-family: 'Dancing Script', cursive;
+    text-align: center;
 }
 
 .Splash-link {
